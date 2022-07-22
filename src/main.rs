@@ -7,12 +7,13 @@ fn main() {
     countries_and_emojis.insert("Germany", Emoji::new("🇩🇪", "German flag"));
     countries_and_emojis.insert("France", Emoji::new("🇫🇷", "French flag"));
 
-    let me = match countries_and_emojis.get(&test as &str) {
+    let flag = match countries_and_emojis.get(&test as &str) {
+        //is casting allowed? I would assume it is just as bad as in typescript?
         Some(&emoji) => emoji,
         None => Emoji::new("🤷‍♂️", "No emoji"),
     };
 
-    println!("{}", me);
+    println!("{}", flag);
 }
 
 struct Config {
