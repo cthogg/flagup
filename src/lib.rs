@@ -1,3 +1,4 @@
+use serde::__private::de::IdentifierDeserializer;
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::collections::HashMap;
@@ -32,14 +33,10 @@ pub fn generate_result(args: Config) -> &'static str {
     let json = read_json_file();
     println!("{}", serde_json::to_string(&json).unwrap());
     let test = args.country_text.clone();
-    let tuples = [("germany", "🇩🇪"), ("france", "🇫🇷"), ("the_gambia", "🇬🇲")];
-    let hashmap_of_tuples: HashMap<&str, &str> = tuples.into_iter().collect();
+    let hashmap_of_tuples: Vec<Data> = json.into_iter().filter(|x| x.name == test).collect();
 
     //FIXME: how to remove this assertion as below
-    let flag = match hashmap_of_tuples.get(&test.to_lowercase() as &str) {
-        Some(&str) => &str,
-        None => "🤷‍♂️",
-    };
+    let flag = hashmap_of_tuples.first().unwrap().emoji.clone().as_str();
     return flag;
 }
 
