@@ -1,12 +1,35 @@
+## flagup
+
+- Have a French friend and want to have a present with their flag but do not know what the French flag is?
+- Struggle in the flag round of your local pub quiz?
+- Ever at the Olympics, a French Athelete wins and asks to you to find their flag (but are too embarassed to say you do not know what the flag of Franche is)?
+
+If you answered Yes to any of these questions, then flagup is for you.
+
+Simply type in the name of the country (in English) and intelligent alogorithm will show the correct flag for you!
+
+Note: Only works with Germany and France (for now!)
+
+## Acceptance Criteria
+
+## Done
+
 1. Create a hashmap of two countries: Germany 🇩🇪 and France 🇫🇷 .
-2. When the user types in Germany 🇩🇪 they get back 🇩🇪
-3. When the user types in France they get back 🇫🇷.
+1. When the user types in Germany 🇩🇪 they get back 🇩🇪
+1. When the user types in France they get back 🇫🇷.
+1. Case insensitive e.g. running flagup
+1. Get it running as a homebrew package using https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/
+1. Has a test for France and Germany.
+1. Has a test for when the country does not exist => adds a 🤷‍♂️
+1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
 
-4. Have a French friend and want to have a present with their flag but do not know what the Frenc
-5. Struggle in the flag round of you local pub quiz?
+## Todo
 
-If you answered Yes to any of these questions, then the Flag app is for you.
-
-Simply type in the name of the country (in English) and intelligent alogorithm of our machine will generate the correct flag for you!
-
-Note: Only working with Germany and France at the moment.
+1. Bug: on my vscode terminal runnig it returns a box and not an emoji.
+1. Split into pacakges and a website a website running wasm with something similar to https://github.com/mitsuhiko/when
+1.
+1. Publish to a crate with one public function of flagup("Germany") -> 🇩🇪
+1. Get a reverse search e.g. 🇩🇪 -> Germany
+1. Get a description parse the information to https://en.wikipedia.org/wiki/Flag_of_Germany.
+1. Add suggestions => e.g. typing Ger brings up "did you mean Germany"?
+1. Automatically publishes to crates.io and other things

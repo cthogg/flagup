@@ -1,32 +1,64 @@
-use std::{collections::HashMap, env::Args};
+use std::collections::HashMap;
 
 pub struct Config {
     pub country_text: String,
 }
 
 impl Config {
-    pub fn new(args: Args) -> Self {
-        let ar: Vec<String> = args.collect();
+    pub fn new(args: Vec<String>) -> Self {
         Config {
-            country_text: ar[1].clone(),
+            country_text: args[1].clone(),
         }
     }
 }
 
-pub fn generate_result(args: Config) {
+pub fn generate_result(args: Config) -> &'static str {
     let test = args.country_text.clone();
-    let tuples = [("Germany", "🇩🇪"), ("France", "🇫🇷")];
-    let m: HashMap<&str, &str> = tuples.into_iter().collect();
+    let tuples = [("germany", "🇩🇪"), ("france", "🇫🇷"), ("the_gambia", "🇬🇲")];
+    let hashmap_of_tuples: HashMap<&str, &str> = tuples.into_iter().collect();
 
-    let flag = match m.get(&test as &str) {
+    //FIXME: how to remove this assertion of as below
+    let flag = match hashmap_of_tuples.get(&test.to_lowercase() as &str) {
         Some(&str) => &str,
         None => "🤷‍♂️",
     };
-
-    println!("{}", flag);
+    return flag;
 }
 
-// TODO: write a test for the generate_result function
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_germany_creates_correct_flag() {
+        assert_eq!(
+            generate_result(Config::new(vec![
+                "flagup".to_string(),
+                "germany".to_string()
+            ])),
+            "🇩🇪"
+        );
+    }
+    #[test]
+    fn test_france_creates_correct_flag() {
+        assert_eq!(
+            generate_result(Config::new(vec![
+                "flagup".to_string(),
+                "france".to_string()
+            ])),
+            "🇫🇷"
+        );
+    }
+    #[test]
+    fn test_not_a_country_returns_a_shrug() {
+        assert_eq!(
+            generate_result(Config::new(vec![
+                "flagup".to_string(),
+                "not_a_country".to_string()
+            ])),
+            "🤷‍♂️"
+        );
+    }
+}
 
 // run the rust project on homebrew
 // https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/
