@@ -25,3 +25,8 @@ pub fn generate_result(args: Config) {
 
     println!("{}", flag);
 }
+
+// TODO: write a test for the generate_result function
+
+// run the rust project on homebrew
+// https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/
