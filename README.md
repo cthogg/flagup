@@ -40,6 +40,7 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 
 ### TODO
 
+1. Need to change the git commit user name to cthogg and not the christopher-luminovo one
 1. Support countries with spaces e.g. (Ascension Island)
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
 1. Bug: on my vscode terminal runnig it returns a box and not an emoji.
