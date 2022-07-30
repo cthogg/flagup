@@ -1,5 +1,5 @@
-use flagup::{generate_result, read_json_file, Config};
+use flagup::{generate_flag_from_result, Config};
 fn main() {
     let args = Config::new(std::env::args().collect());
-    println!("{}", generate_result(args, read_json_file()));
+    println!("{}", generate_flag_from_result(args));
 }

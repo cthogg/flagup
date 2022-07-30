@@ -21,12 +21,13 @@ Note: Only works with Germany and France (for now!)
 1. Get it running as a homebrew package using https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/
 1. Has a test for France and Germany.
 1. Has a test for when the country does not exist => adds a 🤷‍♂️
-1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
+1. Use other countries as well (e.g. Andorra)
 
 ## In progress
 
 ## Todo
 
+1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
 1. Bug: on my vscode terminal runnig it returns a box and not an emoji.
 1. Split into pacakges and a website a website running wasm with something similar to https://github.com/mitsuhiko/when
 1. Get a reverse search e.g. 🇩🇪 -> Germany
