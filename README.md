@@ -8,22 +8,22 @@ If you answered Yes to any of these questions, then flagup is for you.
 
 Simply type in the name of the country (in English) and intelligent alogorithm will show the correct flag for you!
 
-## Installation instructions (macos)
+## Installation (mac-os)
 
 - `brew tap cthogg/flagup`
 - `brew install flagup`
 
 ## Generate package for homebrew
 
-Follow the instructions (here)[https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/] or run the command.
+Follow the instructions [here](https://federicoterzi.com/blog/how-to-publish-your-rust-project-on-homebrew/) or run the command.
 
 ```
 cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.tar.gz flagup && shasum -a 256 flagup-mac.tar.gz >256-flagup.txt
 ```
 
-## Acceptance Criteria
+## Features
 
-## Done
+### Done
 
 1. Create a hashmap of two countries: Germany 🇩🇪 and France 🇫🇷 .
 1. When the user types in Germany 🇩🇪 they get back 🇩🇪
@@ -34,9 +34,7 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 1. Has a test for when the country does not exist => adds a 🤷‍♂️
 1. Use other countries as well (e.g. Andorra)
 
-## In progress
-
-## Todo
+### TODO
 
 1. Support countries with spaces e.g. (Ascension Island)
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
