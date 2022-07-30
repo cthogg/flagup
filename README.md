@@ -8,7 +8,11 @@ If you answered Yes to any of these questions, then flagup is for you.
 
 Simply type in the name of the country (in English) and intelligent alogorithm will show the correct flag for you!
 
-Note: Only works with Germany and France (for now!)
+## Generate countries
+
+```
+cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.tar.gz flagup && shasum -a 256 flagup-mac.tar.gz >256-flagup.txt
+```
 
 ## Acceptance Criteria
 
@@ -35,3 +39,7 @@ Note: Only works with Germany and France (for now!)
 1. Get a description parse the information to https://en.wikipedia.org/wiki/Flag_of_Germany.
 1. Add suggestions => e.g. typing Ger brings up "did you mean Germany"?
 1. Automatically publishes to crates.io and other things
+
+```
+
+```
