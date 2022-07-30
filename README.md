@@ -1,7 +1,6 @@
 ## flagup
 
-![Alt text](https://raw.githubusercontent.com/cthogg/flagup/main/logo.svg?sanitize=true)
-
+<img src="https://raw.githubusercontent.com/cthogg/flagup/main/logo.svg?sanitize=true">
 - Have a French friend and want to have a present with their flag but do not know what the French flag is?
 - Struggle in the flag round of your local pub quiz?
 - Ever at the Olympics, a French Athelete wins and asks to you to find their flag (but are too embarassed to say you do not know what the flag of Franche is)?
