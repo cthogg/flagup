@@ -6,7 +6,7 @@
 
 - Have a French friend and want to have a present with their flag but do not know what the French flag is?
 - Struggle in the flag round of your local pub quiz?
-- Ever at the Olympics, a French Athelete wins and asks to you to find their flag (but are too embarassed to say you do not know what the flag of Franche is)?
+- Ever at the Olympics, a French Athelete wins and asks to you to find their flag (but are too embarassed to say you do not know what the flag of France is)?
 
 If you answered Yes to any of these questions, then flagup is for you.
 
