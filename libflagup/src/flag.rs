@@ -30,33 +30,43 @@ mod tests {
     use super::*;
     #[test]
     fn test_germany_in_lower_case_creates_correct_flag() {
-        assert_eq!(generate_flag_from_result("germany".to_string()), "🇩🇪");
+        assert_eq!(generate_flag_from_country("germany".to_string()), "🇩🇪");
     }
     #[test]
     fn test_france_creates_correct_flag() {
-        assert_eq!(generate_flag_from_result("france".to_string()), "🇫🇷");
+        assert_eq!(generate_flag_from_country("france".to_string()), "🇫🇷");
     }
     #[test]
     fn test_andorra_creates_correct_flag() {
-        assert_eq!(generate_flag_from_result("andorra".to_string()), "🇦🇩");
+        assert_eq!(generate_flag_from_country("andorra".to_string()), "🇦🇩");
     }
     #[test]
     fn test_gap_in_country_works_correctly() {
         assert_eq!(
-            generate_flag_from_result("Antigua & Barbuda".to_string()),
+            generate_flag_from_country("Antigua & Barbuda".to_string()),
             "🇦🇬"
         );
     }
     #[test]
     fn test_not_a_country_returns_a_shrug() {
         assert_eq!(
-            generate_flag_from_result("not a country".to_string()),
+            generate_flag_from_country("not a country".to_string()),
             "not found",
         );
     }
 }
 
-pub fn generate_flag_from_result(country: String) -> String {
+/// Generates a flag from a country name
+///
+/// # Examples
+///
+/// ```
+///
+/// let answer = libflagup::generate_flag_from_result("Germany".to_string());
+///
+/// assert_eq!("🇩🇪", answer);
+/// ```
+pub fn generate_flag_from_country(country: String) -> String {
     let json = generate_countries();
     return generate_result(country, json);
 }
