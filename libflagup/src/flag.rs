@@ -25,46 +25,25 @@ fn generate_result(country: String, json: Vec<Country>) -> String {
     return found_results.first().unwrap_or(default_data).emoji.clone();
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    #[test]
-    fn test_germany_in_lower_case_creates_correct_flag() {
-        assert_eq!(generate_flag_from_country("germany".to_string()), "🇩🇪");
-    }
-    #[test]
-    fn test_france_creates_correct_flag() {
-        assert_eq!(generate_flag_from_country("france".to_string()), "🇫🇷");
-    }
-    #[test]
-    fn test_andorra_creates_correct_flag() {
-        assert_eq!(generate_flag_from_country("andorra".to_string()), "🇦🇩");
-    }
-    #[test]
-    fn test_gap_in_country_works_correctly() {
-        assert_eq!(
-            generate_flag_from_country("Antigua & Barbuda".to_string()),
-            "🇦🇬"
-        );
-    }
-    #[test]
-    fn test_not_a_country_returns_a_shrug() {
-        assert_eq!(
-            generate_flag_from_country("not a country".to_string()),
-            "not found",
-        );
-    }
-}
-
 /// Generates a flag from a country name
 ///
 /// # Examples
 ///
 /// ```
-///
-/// let answer = libflagup::generate_flag_from_result("Germany".to_string());
-///
+/// let answer = libflagup::generate_flag_from_country("Germany".to_string());
 /// assert_eq!("🇩🇪", answer);
+/// ```
+/// /// ```
+/// let lower_case_answer = libflagup::generate_flag_from_country("france".to_string());
+/// assert_eq!("🇫🇷", lower_case_answer);
+/// ```
+/// /// ```
+/// let answer_space_in_country = libflagup::generate_flag_from_country("Antigua & Barbuda".to_string());
+/// assert_eq!("🇦🇬", answer_space_in_country);
+/// ```
+/// /// ```
+/// let not_a_country = libflagup::generate_flag_from_country("Fake country".to_string());
+/// assert_eq!("not a country", not_a_country);
 /// ```
 pub fn generate_flag_from_country(country: String) -> String {
     let json = generate_countries();
