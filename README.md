@@ -37,17 +37,17 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 1. Has a test for France and Germany.
 1. Has a test for when the country does not exist => adds a 🤷‍♂️
 1. Use other countries as well (e.g. Andorra)
+1. Split up the packages to cli and lib like https://github.com/mitsuhiko/when/commit/194eab88d9b05dc4799166720dff42cdaaabf810
 
 ### TODO
 
+1. Publish to a crate on crates.io with one public function of flagup("Germany") -> 🇩🇪 See https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html
 1. Need to change the git commit user name to cthogg and not the christopher-luminovo one
-1. Support countries with spaces e.g. (Ascension Island)
+1. Support countries with spaces e.g. (Ascension Island) -> see comment by colleague
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
-1. Bug: on my vscode terminal runnig it returns a box and not an emoji.
-1. Split into pacakges and a website a website running wasm with something similar to https://github.com/mitsuhiko/when. See this commit specifically.
+1. Bug: on my vscode terminal runnig it returns a box and not an emoji. Think more of a vscode bug though.
+1. Get a webstite running wasm with something similar to https://github.com/mitsuhiko/when.
 1. Get a reverse search e.g. 🇩🇪 -> Germany
-1. Publish to a crate with one public function of flagup("Germany") -> 🇩🇪
-1. Get a description parse the information to https://en.wikipedia.org/wiki/Flag_of_Germany.
+1. Get a description parse the information to https://en.wikipedia.org/wiki/Flag_of_Germany. (e.g. country with red gold and black flag)
 1. Add suggestions => e.g. typing Ger brings up "did you mean Germany"?
-1. Automatically publishes to crates.io and other things.
-1. publish my function to crates.io
+1. Automatically publishes to crates.io and homebrew.

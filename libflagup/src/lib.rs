@@ -1,7 +1,7 @@
 //! This is the internal library for the
-//! [`when`](https://github.com/cthogg/flagup) command line utility.
+//! [`flagup`](https://github.com/cthogg/flagup) command line utility.
 //!
-//! Using this crate directly is not recommended as it's not maintained with a stable
+//! Using the crate directly is not recommended since it is not maintained with a stable
 //! API interface.
 mod flag;
 
