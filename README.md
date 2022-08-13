@@ -44,7 +44,7 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 1. Support countries with spaces e.g. (Ascension Island)
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
 1. Bug: on my vscode terminal runnig it returns a box and not an emoji.
-1. Split into pacakges and a website a website running wasm with something similar to https://github.com/mitsuhiko/when
+1. Split into pacakges and a website a website running wasm with something similar to https://github.com/mitsuhiko/when. See this commit specifically.
 1. Get a reverse search e.g. 🇩🇪 -> Germany
 1. Publish to a crate with one public function of flagup("Germany") -> 🇩🇪
 1. Get a description parse the information to https://en.wikipedia.org/wiki/Flag_of_Germany.
