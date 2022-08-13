@@ -138,7 +138,7 @@ checksum = "04c3b4822ccebfa39c02fc03d1534441b22ead323fa0f48bb7ddd8e6ba076a40"
 
 [[package]]
 name = "libflagup"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
  "console",
  "serde",
