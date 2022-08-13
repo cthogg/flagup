@@ -30,21 +30,24 @@ fn generate_result(country: String, json: Vec<Country>) -> String {
 /// # Examples
 ///
 /// ```
+/// // basic usage
 /// let answer = libflagup::generate_flag_from_country("Germany".to_string());
 /// assert_eq!("🇩🇪", answer);
 /// ```
 /// ```
-/// Can have a lower case country name.
-/// let lower_case_answer = libflagup::generate_flag_from_country("france".to_string());
-/// assert_eq!("🇫🇷", lower_case_answer);
+/// // can have a lower case country name.
+/// let answer = libflagup::generate_flag_from_country("france".to_string());
+/// assert_eq!("🇫🇷", answer);
 /// ```
 /// ```
-/// let answer_space_in_country = libflagup::generate_flag_from_country("Antigua & Barbuda".to_string());
-/// assert_eq!("🇦🇬", answer_space_in_country);
+/// // spaces in country name are allowed.
+/// let answer = libflagup::generate_flag_from_country("Antigua & Barbuda".to_string());
+/// assert_eq!("🇦🇬", answer);
 /// ```
 /// ```
-/// let not_a_country = libflagup::generate_flag_from_country("Fake country".to_string());
-/// assert_eq!("not a country", not_a_country);
+/// // when it is not a country returns not a country
+/// let answer = libflagup::generate_flag_from_country("Fake country".to_string());
+/// assert_eq!("not found", answer);
 /// ```
 pub fn generate_flag_from_country(country: String) -> String {
     let json = generate_countries();
