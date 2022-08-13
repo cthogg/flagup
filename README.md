@@ -12,6 +12,11 @@ If you answered Yes to any of these questions, then flagup is for you.
 
 Simply type in the name of the country (in English) and intelligent alogorithm will show the correct flag for you!
 
+## Packages
+
+- cli: the command line application.
+- libflagup: the library package. Also available from crates.io.
+
 ## Installation (mac-os)
 
 - `brew tap cthogg/flagup`
@@ -43,6 +48,7 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 
 ### TODO
 
+1.
 1. Need to change the git commit user name to cthogg and not the christopher-luminovo one
 1. Support countries with spaces e.g. (Ascension Island) -> see comment by colleague
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
