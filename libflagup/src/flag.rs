@@ -34,6 +34,7 @@ fn generate_result(country: String, json: Vec<Country>) -> String {
 /// assert_eq!("🇩🇪", answer);
 /// ```
 /// ```
+/// Can have a lower case country name.
 /// let lower_case_answer = libflagup::generate_flag_from_country("france".to_string());
 /// assert_eq!("🇫🇷", lower_case_answer);
 /// ```
