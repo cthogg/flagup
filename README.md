@@ -1,7 +1,7 @@
 ## flagup
 
 <p align="center">
-<img src="./logo.svg?sanitize=true" width=320>
+<img src="https://raw.githubusercontent.com/cthogg/flagup/main/logo.svg" width=320>
 </p>
 
 - Have a French friend and want to have a present with their flag but do not know what the French flag is?
