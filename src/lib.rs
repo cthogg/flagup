@@ -1,9 +1,20 @@
+use clap::Parser;
 use serde::{Deserialize, Serialize};
 use serde_json::{self};
+
 #[derive(Serialize, Deserialize, Debug)]
 struct Country {
     emoji: String,
     name: String,
+}
+
+/// Simple program to show a flag of a country
+#[derive(Parser, Debug)]
+#[clap(version, about, long_about = None)]
+pub struct Args {
+    /// Country to search for
+    #[clap(value_parser)]
+    country: String,
 }
 
 pub struct Config {
@@ -11,9 +22,9 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(args: Vec<String>) -> Self {
+    pub fn new(args: Args) -> Self {
         Config {
-            country_text: args[1].clone(),
+            country_text: args.country.clone(),
         }
     }
 }
@@ -47,40 +58,45 @@ mod tests {
     #[test]
     fn test_germany_in_lower_case_creates_correct_flag() {
         assert_eq!(
-            generate_flag_from_result(Config::new(vec![
-                "flagup".to_string(),
-                "germany".to_string()
-            ])),
+            generate_flag_from_result(Config::new(Args {
+                country: "GERMANY".to_string(),
+            })),
             "🇩🇪"
         );
     }
     #[test]
     fn test_france_creates_correct_flag() {
         assert_eq!(
-            generate_flag_from_result(Config::new(vec![
-                "flagup".to_string(),
-                "france".to_string()
-            ])),
+            generate_flag_from_result(Config::new(Args {
+                country: "france".to_string(),
+            })),
             "🇫🇷"
         );
     }
     #[test]
     fn test_andorra_creates_correct_flag() {
         assert_eq!(
-            generate_flag_from_result(Config::new(vec![
-                "flagup".to_string(),
-                "andorra".to_string()
-            ]),),
+            generate_flag_from_result(Config::new(Args {
+                country: "andorra".to_string(),
+            }),),
             "🇦🇩"
+        );
+    }
+    #[test]
+    fn test_gap_in_country_works_correctly() {
+        assert_eq!(
+            generate_flag_from_result(Config::new(Args {
+                country: "Antigua & Barbuda".to_string(),
+            }),),
+            "🇦🇬"
         );
     }
     #[test]
     fn test_not_a_country_returns_a_shrug() {
         assert_eq!(
-            generate_flag_from_result(Config::new(vec![
-                "flagup".to_string(),
-                "not_a_country".to_string()
-            ]),),
+            generate_flag_from_result(Config::new(Args {
+                country: "no a country".to_string(),
+            }),),
             "not found",
         );
     }
