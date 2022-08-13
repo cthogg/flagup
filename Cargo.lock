@@ -85,8 +85,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a357d28ed41a50f9c765dbfe56cbc04a64e53e5fc58ba79fbc34c10ef3df831f"
 
 [[package]]
-name = "flagup-cli"
-version = "0.0.7"
+name = "flagup"
+version = "0.0.8"
 dependencies = [
  "clap",
  "console",

@@ -1,5 +1,5 @@
 use clap::Parser;
-use flagup_cli::{Args, Config};
+use flagup::{Args, Config};
 use libflagup::generate_flag_from_country;
 fn main() {
     let args = Args::parse();
