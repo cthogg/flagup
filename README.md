@@ -38,11 +38,11 @@ cargo test && cargo build --release && cd target/release && tar -czf flagup-mac.
 1. Has a test for when the country does not exist => adds a 🤷‍♂️
 1. Use other countries as well (e.g. Andorra)
 1. Split up the packages to cli and lib like https://github.com/mitsuhiko/when/commit/194eab88d9b05dc4799166720dff42cdaaabf810
+1. Publish to a crate on crates.io with one public function of flagup("Germany") -> 🇩🇪 See https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html
+1. Make all tests doc tests.
 
 ### TODO
 
-1. Publish to a crate on crates.io with one public function of flagup("Germany") -> 🇩🇪 See https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html
-1. Make all tests doc tests.
 1. Need to change the git commit user name to cthogg and not the christopher-luminovo one
 1. Support countries with spaces e.g. (Ascension Island) -> see comment by colleague
 1. Use multiple lanugages i.e. Deutschland -> 🇩🇪.
